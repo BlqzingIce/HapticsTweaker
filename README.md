@@ -17,7 +17,7 @@ Normal Notes, Chain Heads, Chain Links/Elements, Bad Cuts, Bombs, and Arcs
 - The config file can be found at Beat Saber/UserData/HapticsTweaker.json
 - `EnableMod`: Enables or disables all mod functionality
 - `_____HapticDuration`: Controls the duration of the haptic impulse triggered, in seconds. Any non-negative value should work, but values above 1 second are discouraged
-- `_____HapticStrength`: Controls the strength of the haptic impulse triggered, from 0-1.
+- `_____HapticStrength`: Controls the strength of the haptic impulse triggered, in percent of max. Represented by a float from 0-1.
 
 ## Credits
 This mod is essentially my own take on SaberHaptics and I referenced a lot of code from it, and referenced a lot from Tweaks55 as well. Major thanks to GoldenGuy1000 and kinsi55 for their great mods.
