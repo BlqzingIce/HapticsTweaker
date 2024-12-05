@@ -1,0 +1,14 @@
+﻿{
+  "$schema": "https://raw.githubusercontent.com/bsmg/BSIPA-MetadataFileSchema/master/Schema.json",
+  "id": "HapticsTweaker",
+  "name": "HapticsTweaker",
+  "author": "BlqzingIce",
+  "version": "1.0.0",
+  "description": "Highly configurable controller haptics!",
+  "gameVersion": "1.39.1",
+  "dependsOn": {
+    "BSIPA": "^4.3.5",
+    "SiraUtil": "^3.1.12",
+    "BeatSaberMarkupLanguage": "^1.12.2"
+  }
+}
