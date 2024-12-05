@@ -12,9 +12,9 @@
     <tab tab-name='Normal Notes' tags='tabs'>
         <modifier-container child-expand-width='true' horizontal-fit='PreferredSize'>
             <slider-setting text='Normal Duration' value='normal-duration' apply-on-change='true' min='0' max='0.2' show-buttons='true' increment='0.001' formatter='d' hover-hint='Default: 0.13s'/>
-            <slider-setting text='Normal Strength' value='normal-strength' apply-on-change='true' min='0' max='1' show-buttons='true' increment='0.005' formatter='s' hover-hint='Default: 1.00%'/>
+            <slider-setting text='Normal Strength' value='normal-strength' apply-on-change='true' min='0' max='1' show-buttons='true' increment='0.005' formatter='s' hover-hint='Default: 100.0%'/>
             <slider-setting text='Bad Cut Duration' value='badcut-duration' apply-on-change='true' min='0' max='0.2' show-buttons='true' increment='0.001' formatter='d' hover-hint='Default: 0.13s'/>
-            <slider-setting text='Bad Cut Strength' value='badcut-strength' apply-on-change='true' min='0' max='1' show-buttons='true' increment='0.005' formatter='s' hover-hint='Default: 1.00%'/>
+            <slider-setting text='Bad Cut Strength' value='badcut-strength' apply-on-change='true' min='0' max='1' show-buttons='true' increment='0.005' formatter='s' hover-hint='Default: 100.0%'/>
 			<horizontal>
 				<button text='Normal Test' on-click='normal_button_clicked'/>
 				<button text='Bad Cut Test' on-click='badcut_button_clicked'/>
@@ -24,9 +24,9 @@
     <tab tab-name='Chain Notes' tags='tabs'>
         <modifier-container child-expand-width='true' horizontal-fit='PreferredSize'>
             <slider-setting text='Chain Head Duration' value='chainhead-duration' apply-on-change='true' min='0' max='0.2' show-buttons='true' increment='0.001' formatter='d' hover-hint='Default: 0.13s'/>
-            <slider-setting text='Chain Head Strength' value='chainhead-strength' apply-on-change='true' min='0' max='1' show-buttons='true' increment='0.005' formatter='s' hover-hint='Default: 1.00%'/>
+            <slider-setting text='Chain Head Strength' value='chainhead-strength' apply-on-change='true' min='0' max='1' show-buttons='true' increment='0.005' formatter='s' hover-hint='Default: 100.0%'/>
             <slider-setting text='Chain Link Duration' value='chainlink-duration' apply-on-change='true' min='0' max='0.2' show-buttons='true' increment='0.001' formatter='d' hover-hint='Default: 0.13s'/>
-            <slider-setting text='Chain Link Strength' value='chainlink-strength' apply-on-change='true' min='0' max='1' show-buttons='true' increment='0.005' formatter='s' hover-hint='Default: 1.00%'/>
+            <slider-setting text='Chain Link Strength' value='chainlink-strength' apply-on-change='true' min='0' max='1' show-buttons='true' increment='0.005' formatter='s' hover-hint='Default: 100.0%'/>
 			<horizontal>
 				<button text='Chain Head Test' on-click='chainhead_button_clicked'/>
 				<button text='Chain Link Test' on-click='chainlink_button_clicked'/>
@@ -36,9 +36,9 @@
     <tab tab-name='Bombs/Arcs' tags='tabs'>
         <modifier-container child-expand-width='true' horizontal-fit='PreferredSize'>
             <slider-setting text='Bomb Duration' value='bomb-duration' apply-on-change='true' min='0' max='0.2' show-buttons='true' increment='0.001' formatter='d' hover-hint='Default: 0.13s'/>
-            <slider-setting text='Bomb Strength' value='bomb-strength' apply-on-change='true' min='0' max='1' show-buttons='true' increment='0.005' formatter='s' hover-hint='Default: 1.00%'/>
+            <slider-setting text='Bomb Strength' value='bomb-strength' apply-on-change='true' min='0' max='1' show-buttons='true' increment='0.005' formatter='s' hover-hint='Default: 100.0%'/>
             <text size-delta-y='7' align='Center' text='Arc Haptic Feedback must be enabled for arc strength to apply.'/>
-            <slider-setting text='Arc Strength' value='arc-strength' apply-on-change='true' min='0' max='1' show-buttons='true' increment='0.005' formatter='s' hover-hint='Default: 0.75%'/>
+            <slider-setting text='Arc Strength' value='arc-strength' apply-on-change='true' min='0' max='1' show-buttons='true' increment='0.005' formatter='s' hover-hint='Default: 75.0%'/>
 			<horizontal>
 				<button text='Bomb Test' on-click='bomb_button_clicked'/>
 				<button text='Arc Test' on-click='arc_button_clicked'/>
