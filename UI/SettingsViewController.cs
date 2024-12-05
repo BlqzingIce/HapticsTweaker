@@ -24,7 +24,7 @@ namespace HapticsTweaker.UI
         [UIAction("s")]
         protected string StrengthFormat(float value)
         {
-            return $"{value:0.00#}%";
+            return $"{value * 100:0.0}%";
         }
 
         [UIValue("enable-mod")]
