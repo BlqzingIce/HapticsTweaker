@@ -1,6 +1,7 @@
 ﻿using BeatSaberMarkupLanguage.Attributes;
 using BeatSaberMarkupLanguage.ViewControllers;
 using Libraries.HM.HMLib.VR;
+using SiraUtil.Logging;
 using System;
 using UnityEngine;
 using UnityEngine.XR;
@@ -11,9 +12,10 @@ namespace HapticsTweaker.UI
     [ViewDefinition("HapticsTweaker.UI.SettingsView.bsml")]
     internal class SettingsViewController : BSMLAutomaticViewController
     {
+        [Inject] readonly SiraLog _log;
         [Inject] private PluginConfig _config = null;
         [Inject] private HapticFeedbackManager _hapticFeedbackManager = null;
-        readonly HapticPresetSO preset = ScriptableObject.CreateInstance<HapticPresetSO>();
+        private readonly HapticPresetSO preset = ScriptableObject.CreateInstance<HapticPresetSO>();
 
         [UIAction("d")]
         protected string DurationFormat(float value)
@@ -111,6 +113,20 @@ namespace HapticsTweaker.UI
             set => _config.ArcHapticStrength = (float)Math.Round(value, 3);
         }
 
+        [UIValue("saber-strength")]
+        protected float SaberStrength
+        {
+            get => _config.SaberClashHapticStrength;
+            set => _config.SaberClashHapticStrength = (float)Math.Round(value, 3);
+        }
+
+        [UIValue("wall-strength")]
+        protected float WallStrength
+        {
+            get => _config.WallClashHapticStrength;
+            set => _config.WallClashHapticStrength = (float)Math.Round(value, 3);
+        }
+
         [UIAction("normal_button_clicked")]
         private void Normal_Button_Clicked()
         {
@@ -182,7 +198,33 @@ namespace HapticsTweaker.UI
             preset._continuous = false;
             preset._duration = 1.0f;
             preset._strength = _config.ArcHapticStrength;
-            if (preset._duration != 0 && preset._strength != 0)
+            if (preset._strength != 0)
+            {
+                _hapticFeedbackManager.PlayHapticFeedback(XRNode.RightHand, preset);
+                _hapticFeedbackManager.PlayHapticFeedback(XRNode.LeftHand, preset);
+            }
+        }
+
+        [UIAction("saber_button_clicked")]
+        private void Saber_Button_Clicked()
+        {
+            preset._continuous = false;
+            preset._duration = 1.0f;
+            preset._strength = _config.SaberClashHapticStrength;
+            if (preset._strength != 0)
+            {
+                _hapticFeedbackManager.PlayHapticFeedback(XRNode.RightHand, preset);
+                _hapticFeedbackManager.PlayHapticFeedback(XRNode.LeftHand, preset);
+            }
+        }
+
+        [UIAction("wall_button_clicked")]
+        private void Wall_Button_Clicked()
+        {
+            preset._continuous = false;
+            preset._duration = 1.0f;
+            preset._strength = _config.WallClashHapticStrength;
+            if (preset._strength != 0)
             {
                 _hapticFeedbackManager.PlayHapticFeedback(XRNode.RightHand, preset);
                 _hapticFeedbackManager.PlayHapticFeedback(XRNode.LeftHand, preset);

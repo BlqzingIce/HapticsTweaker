@@ -10,7 +10,7 @@ namespace HapticsTweaker
     {
         [Inject] readonly SiraLog _log;
         [Inject] private readonly PluginConfig _config;
-        readonly HapticPresetSO preset = ScriptableObject.CreateInstance<HapticPresetSO>();
+        private readonly HapticPresetSO preset = ScriptableObject.CreateInstance<HapticPresetSO>();
 
         [AffinityPrefix]
         [AffinityPatch(typeof(NoteCutHapticEffect), nameof(NoteCutHapticEffect.HitNote))]
@@ -58,7 +58,6 @@ namespace HapticsTweaker
 
     internal class SliderHapticPatch : IAffinity
     {
-        [Inject] readonly SiraLog _log;
         [Inject] private readonly PluginConfig _config;
         readonly HapticPresetSO preset = ScriptableObject.CreateInstance<HapticPresetSO>();
 
@@ -70,8 +69,36 @@ namespace HapticsTweaker
             preset._continuous = true;
             preset._duration = 0.01f;
             preset._strength = _config.ArcHapticStrength;
-            if (preset._duration != 0 && preset._strength != 0) ____hapticFeedbackManager.PlayHapticFeedback(____saberType.Node(), preset);
+            if (preset._strength != 0) ____hapticFeedbackManager.PlayHapticFeedback(____saberType.Node(), preset);
             return false;
+        }
+    }
+
+    internal class SaberClashPatch : IAffinity
+    {
+        [Inject] private readonly PluginConfig _config;
+
+        [AffinityPrefix]
+        [AffinityPatch(typeof(SaberClashEffect), "Start")]
+        private void Prefix(ref HapticPresetSO ____rumblePreset)
+        {
+            ____rumblePreset._strength = 0.75f;
+            if (!_config.EnableMod) return;
+            ____rumblePreset._strength = _config.SaberClashHapticStrength;
+        }
+    }
+
+    internal class WallClashPatch : IAffinity
+    {
+        [Inject] private readonly PluginConfig _config;
+
+        [AffinityPrefix]
+        [AffinityPatch(typeof(ObstacleSaberSparkleEffectManager), "Start")]
+        private void Prefix(ref HapticPresetSO ____rumblePreset)
+        {
+            ____rumblePreset._strength = 0.75f;
+            if (!_config.EnableMod) return;
+            ____rumblePreset._strength = _config.WallClashHapticStrength;
         }
     }
 }

@@ -14,5 +14,7 @@
         public virtual float BombHapticDuration { get; set; } = 0.13f;
         public virtual float BombHapticStrength { get; set; } = 1.0f;
         public virtual float ArcHapticStrength { get; set; } = 0.75f;
+        public virtual float SaberClashHapticStrength { get; set; } = 0.75f;
+        public virtual float WallClashHapticStrength { get; set; } = 0.75f;
     }
 }

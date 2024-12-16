@@ -20,6 +20,8 @@ namespace HapticsTweaker
 
             Container.BindInterfacesTo<NoteCutPatch>().AsSingle();
             Container.BindInterfacesTo<SliderHapticPatch>().AsSingle();
+            Container.BindInterfacesTo<SaberClashPatch>().AsSingle();
+            Container.BindInterfacesTo<WallClashPatch>().AsSingle();
         }
     }
 }

@@ -3,7 +3,7 @@
   "id": "HapticsTweaker",
   "name": "HapticsTweaker",
   "author": "BlqzingIce",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Highly configurable controller haptics!",
   "gameVersion": "1.39.1",
   "dependsOn": {
