@@ -12,7 +12,7 @@ Arcs and clashes do not have a duration as they are continuous.
 - Requires BSIPA, BSML, and SiraUtil
 - Tested on 1.39.1
 - Likely not compatible with any mods that modify haptics. Please disable Custom Haptics in Tweaks55 to avoid unintended behavior!
-- Tweaks55 disables clash particles and haptics together, overriding this mod. Use BS+'s GameTweaker to disable particles if you still want haptics!
+- Tweaks55 disables clash particles and haptics together, overriding this mod. Use BS+'s GameTweaker to disable clash particles if you still want clash haptics!
 
 ## Config File
 - The config file can be found at Beat Saber/UserData/HapticsTweaker.json
