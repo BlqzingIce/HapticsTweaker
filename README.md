@@ -4,14 +4,15 @@ Highly configurable controller haptics!
 
 ## Features
 - **Haptics Customization**  
-Fully customize the haptic duration and strength for 6 unique categories, including:   
-Normal Notes, Chain Heads, Chain Links/Elements, Bad Cuts, Bombs, and Arcs
+Fully customize the haptic duration and strength of Normal Notes, Chain Heads, Chain Links/Elements, Bad Cuts, Bombs, Arcs, Saber Clashes, and Wall Clashes!  
+Arcs and clashes do not have a duration as they are continuous.
 
 ## How To Install
 - Simply download HapticsTweaker.dll from [releases](https://github.com/BlqzingIce/HapticsTweaker/releases) and put it in your Plugins folder!
 - Requires BSIPA, BSML, and SiraUtil
 - Tested on 1.39.1
 - Likely not compatible with any mods that modify haptics. Please disable Custom Haptics in Tweaks55 to avoid unintended behavior!
+- Tweaks55 disables clash particles and haptics together, overriding this mod. Use BS+'s GameTweaker to disable particles if you still want haptics!
 
 ## Config File
 - The config file can be found at Beat Saber/UserData/HapticsTweaker.json
