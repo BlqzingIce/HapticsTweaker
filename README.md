@@ -10,7 +10,6 @@ Arcs and clashes do not have a duration as they are continuous.
 ## How To Install
 - Simply download HapticsTweaker.dll from [releases](https://github.com/BlqzingIce/HapticsTweaker/releases) and put it in your Plugins folder!
 - Requires BSIPA, BSML, and SiraUtil
-- Tested on 1.39.1
 - Likely not compatible with any mods that modify haptics. Please disable Custom Haptics in Tweaks55 to avoid unintended behavior!
 - Tweaks55 disables clash particles and haptics together, overriding this mod. Use BS+'s GameTweaker to disable clash particles if you still want clash haptics!
 
