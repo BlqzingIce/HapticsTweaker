@@ -113,4 +113,7 @@
     <None Include="Directory.Build.targets" Condition="Exists('Directory.Build.targets')"/>
     <None Include="HapticsTweaker.csproj.user" Condition="Exists('HapticsTweaker.csproj.user')"/>
   </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="UI\SettingsView.bsml" />
+    </ItemGroup>
 </Project>
