@@ -1,7 +1,6 @@
 ﻿using BeatSaberMarkupLanguage.Attributes;
 using BeatSaberMarkupLanguage.ViewControllers;
 using Libraries.HM.HMLib.VR;
-using SiraUtil.Logging;
 using System;
 using UnityEngine;
 using UnityEngine.XR;
@@ -12,7 +11,6 @@ namespace HapticsTweaker.UI
     [ViewDefinition("HapticsTweaker.UI.SettingsView.bsml")]
     internal class SettingsViewController : BSMLAutomaticViewController
     {
-        [Inject] readonly SiraLog _log;
         [Inject] private PluginConfig _config = null;
         [Inject] private HapticFeedbackManager _hapticFeedbackManager = null;
         private readonly HapticPresetSO preset = ScriptableObject.CreateInstance<HapticPresetSO>();

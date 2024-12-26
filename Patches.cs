@@ -8,8 +8,8 @@ namespace HapticsTweaker
 {
     internal class NoteCutPatch : IAffinity
     {
-        [Inject] readonly SiraLog _log;
-        [Inject] private readonly PluginConfig _config;
+        [Inject] readonly SiraLog _log = null;
+        [Inject] private readonly PluginConfig _config = null;
         private readonly HapticPresetSO preset = ScriptableObject.CreateInstance<HapticPresetSO>();
 
         [AffinityPrefix]
@@ -58,7 +58,7 @@ namespace HapticsTweaker
 
     internal class SliderHapticPatch : IAffinity
     {
-        [Inject] private readonly PluginConfig _config;
+        [Inject] private readonly PluginConfig _config = null;
         readonly HapticPresetSO preset = ScriptableObject.CreateInstance<HapticPresetSO>();
 
         [AffinityPrefix]
@@ -76,7 +76,7 @@ namespace HapticsTweaker
 
     internal class SaberClashPatch : IAffinity
     {
-        [Inject] private readonly PluginConfig _config;
+        [Inject] private readonly PluginConfig _config = null;
 
         [AffinityPrefix]
         [AffinityPatch(typeof(SaberClashEffect), "Start")]
@@ -90,7 +90,7 @@ namespace HapticsTweaker
 
     internal class WallClashPatch : IAffinity
     {
-        [Inject] private readonly PluginConfig _config;
+        [Inject] private readonly PluginConfig _config = null;
 
         [AffinityPrefix]
         [AffinityPatch(typeof(ObstacleSaberSparkleEffectManager), "Start")]
