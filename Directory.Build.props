@@ -6,11 +6,11 @@
         <AssemblyName>HapticsTweaker</AssemblyName>
         <Authors>BlqzingIce</Authors>
         <Version>1.1.0</Version>
-        <GameVersion>1.40.0</GameVersion>
+        <GameVersion>1.39.1</GameVersion>
         <Description>Highly configurable controller haptics!</Description>
-        <ProjectHome></ProjectHome>
-        <ProjectSource></ProjectSource>
-        <Donate></Donate>
+        <!-- <ProjectHome></ProjectHome> -->
+        <!-- <ProjectSource></ProjectSource> -->
+        <!-- <Donate></Donate> -->
     </PropertyGroup>
     <ItemGroup>
         <Dependency Include="BSIPA" Version="^4.3.5" />
