@@ -15,7 +15,7 @@
     <ItemGroup>
         <Dependency Include="BSIPA" Version="^4.3.5" />
         <Dependency Include="SiraUtil" Version="^3.1.14" />
-        <Dependency Include="BeatSaberMarkupLanguage" Version="^1.12.5" />
+        <Dependency Include="BeatSaberMarkupLanguage" Version="^1.12.4" />
     </ItemGroup>
     <!-- End Manifest -->
     <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
