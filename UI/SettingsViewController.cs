@@ -13,8 +13,13 @@ namespace HapticsTweaker.UI
     {
         [Inject] private PluginConfig _config = null;
         [Inject] private HapticFeedbackManager _hapticFeedbackManager = null;
-        private readonly HapticPresetSO preset = ScriptableObject.CreateInstance<HapticPresetSO>();
+        private HapticPresetSO preset;
 
+        private void Awake()
+        {
+            preset = ScriptableObject.CreateInstance<HapticPresetSO>();
+        }
+        
         [UIAction("d")]
         protected string DurationFormat(float value)
         {

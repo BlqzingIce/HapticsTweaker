@@ -31,4 +31,8 @@
         <DisableCopyToPlugins>true</DisableCopyToPlugins>
         <DisableZipRelease>true</DisableZipRelease>
     </PropertyGroup>
+    <!-- PropertyGroup>
+        <DisableCopyToPlugins>true</DisableCopyToPlugins>
+        <Configuration>Release</Configuration>
+    </PropertyGroup -->
 </Project>
